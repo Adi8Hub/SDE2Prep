@@ -1,7 +1,32 @@
 // TODO: Prefix and Suffix arrays
-Console.WriteLine("hello");
+public class Solution
+{
+    public int[] ProductExceptSelf(int[] nums)
+    {
+        int n = nums.Length;
+        int[] product = new int[n];
 
+        product[0] = 1;
+        for (int i = 1; i < n; i++)
+        {
+            product[i] = product[i - 1] * nums[i - 1];//   1   1   2   6
+        }
 
+        int right = 1;
+        for (int j = n - 1; j >= 0; j--)
+        {
+            product[j] *= right;    //  24   12   8   6
+            right *= nums[j];
+        }
+
+        return product;
+    }
+}
+
+/*
+NOTE: Instead of using 2 prefix suffux arrays, calculate prefix array
+THen recalculate over right prefix variablr, THis variable acts like right prefix product
+*/
 
 
 
