@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 
 var sol = new Solution();
-
+////////////////////      INPUTS     ///////////////////////////
 // int[] nums = { 2, 7, 11, 15 };
 // int target = 9;
 
