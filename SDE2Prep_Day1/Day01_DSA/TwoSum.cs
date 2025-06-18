@@ -23,6 +23,8 @@ public class Solution
     }
 }
 
+/////******************** Moved Main outside and on top ****************///////////////
+
 // public class Program
 // {
 //     public static void Main(string[] args)
