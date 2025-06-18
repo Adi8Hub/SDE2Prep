@@ -1,19 +1,15 @@
-// TODO: Implement brute-force and optimal
 using System;
 using System.Collections.Generic;
 
-class Program
+var sol = new Solution();
+int[] nums = { 2, 7, 11, 15 };
+int target = 9;
+var res = sol.TwoSum(nums, target);
+Console.WriteLine($"[{res[0]}, {res[1]}]");
+
+public class Solution
 {
-    static void Main(string[] args)
-    {
-        int[] nums = { 2, 7, 11, 15 };
-        int target = 9;
-        var result = TwoSum(nums, target);
-
-        Console.WriteLine($"[{result[0]}, {result[1]}]");
-    }
-
-    public static int[] TwoSum(int[] nums, int target)
+    public int[] TwoSum(int[] nums, int target)
     {
         Dictionary<int, int> map = new();
         for (int i = 0; i < nums.Length; i++)
@@ -26,3 +22,17 @@ class Program
         return new int[] { -1, -1 };
     }
 }
+
+// public class Program
+// {
+//     public static void Main(string[] args)
+//     {
+//         var sol = new Solution();
+//         int[] nums = { 2, 7, 11, 15 };
+//         int target = 9;
+//         var res = sol.TwoSum(nums, target);
+//         Console.WriteLine($"[{res[0]}, {res[1]}]");
+//     }
+// }
+
+
