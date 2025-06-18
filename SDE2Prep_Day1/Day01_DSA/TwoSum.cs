@@ -23,7 +23,7 @@ public class Solution
     }
 }
 
-/////******************** Moved Main outside and on top ****************///////////////
+///*******Moved Main outside *********
 
 // public class Program
 // {
