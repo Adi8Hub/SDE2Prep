@@ -3,13 +3,12 @@ using System.Collections.Generic;
 
 var sol = new Solution();
 
-
 // int[] nums = { 2, 7, 11, 15 };
 // int target = 9;
+
 int[] nums = [3, 2, 4];
 int target = 6;
-
-
+///////////////////////////////////////////////////////////
 var res = sol.TwoSum(nums, target);
 Console.WriteLine($"[{res[0]}, {res[1]}]");
 
