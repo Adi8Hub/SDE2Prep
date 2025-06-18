@@ -1,0 +1,15 @@
+C:\Users\amdev\Desktop\Personal ProjectsPract\SDE2Prep\SDE2Prep_Day1\Day01_DSA\Runner\bin\Debug\net8.0\Runner.exe
+C:\Users\amdev\Desktop\Personal ProjectsPract\SDE2Prep\SDE2Prep_Day1\Day01_DSA\Runner\bin\Debug\net8.0\Runner.deps.json
+C:\Users\amdev\Desktop\Personal ProjectsPract\SDE2Prep\SDE2Prep_Day1\Day01_DSA\Runner\bin\Debug\net8.0\Runner.runtimeconfig.json
+C:\Users\amdev\Desktop\Personal ProjectsPract\SDE2Prep\SDE2Prep_Day1\Day01_DSA\Runner\bin\Debug\net8.0\Runner.dll
+C:\Users\amdev\Desktop\Personal ProjectsPract\SDE2Prep\SDE2Prep_Day1\Day01_DSA\Runner\bin\Debug\net8.0\Runner.pdb
+C:\Users\amdev\Desktop\Personal ProjectsPract\SDE2Prep\SDE2Prep_Day1\Day01_DSA\Runner\obj\Debug\net8.0\Runner.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\amdev\Desktop\Personal ProjectsPract\SDE2Prep\SDE2Prep_Day1\Day01_DSA\Runner\obj\Debug\net8.0\Runner.AssemblyInfoInputs.cache
+C:\Users\amdev\Desktop\Personal ProjectsPract\SDE2Prep\SDE2Prep_Day1\Day01_DSA\Runner\obj\Debug\net8.0\Runner.AssemblyInfo.cs
+C:\Users\amdev\Desktop\Personal ProjectsPract\SDE2Prep\SDE2Prep_Day1\Day01_DSA\Runner\obj\Debug\net8.0\Runner.csproj.CoreCompileInputs.cache
+C:\Users\amdev\Desktop\Personal ProjectsPract\SDE2Prep\SDE2Prep_Day1\Day01_DSA\Runner\obj\Debug\net8.0\Runner.sourcelink.json
+C:\Users\amdev\Desktop\Personal ProjectsPract\SDE2Prep\SDE2Prep_Day1\Day01_DSA\Runner\obj\Debug\net8.0\Runner.dll
+C:\Users\amdev\Desktop\Personal ProjectsPract\SDE2Prep\SDE2Prep_Day1\Day01_DSA\Runner\obj\Debug\net8.0\refint\Runner.dll
+C:\Users\amdev\Desktop\Personal ProjectsPract\SDE2Prep\SDE2Prep_Day1\Day01_DSA\Runner\obj\Debug\net8.0\Runner.pdb
+C:\Users\amdev\Desktop\Personal ProjectsPract\SDE2Prep\SDE2Prep_Day1\Day01_DSA\Runner\obj\Debug\net8.0\Runner.genruntimeconfig.cache
+C:\Users\amdev\Desktop\Personal ProjectsPract\SDE2Prep\SDE2Prep_Day1\Day01_DSA\Runner\obj\Debug\net8.0\ref\Runner.dll
