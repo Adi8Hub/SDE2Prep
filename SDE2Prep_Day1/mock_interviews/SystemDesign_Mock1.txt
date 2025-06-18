@@ -1,0 +1,6 @@
+Amazon SDE‑2 Mock – System Design
+Time: 45 min
+
+Prompt: Design a Parking Lot system.
+- Clarify scope, classes, relationships.
+- Describe interactions, APIs.

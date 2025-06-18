@@ -1,0 +1,10 @@
+Amazon SDE‑2 Mock – DSA Round
+Time: 45 min
+
+Problem 1: Two Sum
+- Implement in C#. Include time & space complexity.
+- Follow-up: What if input size is very large?
+
+Problem 2: Minimum Window Substring
+- Write solution using sliding window.
+- Test edge cases.
