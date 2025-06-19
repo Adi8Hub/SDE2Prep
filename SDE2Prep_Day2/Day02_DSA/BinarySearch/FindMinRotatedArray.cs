@@ -45,11 +45,32 @@ All the integers of nums are unique.
 nums is sorted and rotated between 1 and n times.
 */
 
+using System;
+
+int[] nums = [4, 5, 6, 7, 0, 1, 2];
+int ans = Solution.FindMinRotatedArray(nums);
+Console.WriteLine($"Minimum in ROtated Array is : {ans}");
 
 public class Solution
 {
-    public int FindMinRotatedArray(int[] nums)
+    public static int FindMinRotatedArray(int[] nums)
     {
+        int left = 0, right = nums.Length - 1;
+        while (left <= right)
+        {
+            if (nums[left] <= nums[right]) return nums[left];
 
+            int mid = left + (right - left) / 2;
+
+            if (nums[left] <= nums[mid])
+            {
+                left = mid + 1;
+            }
+            else
+            {
+                right = mid;
+            }
+        }
+        return -1;
     }
 }
