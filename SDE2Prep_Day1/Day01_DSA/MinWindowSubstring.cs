@@ -1,5 +1,4 @@
 // TODO: Sliding window with hashmaps
-// TODO: Sliding window with hashmaps
 /* 76.Minimum Window Substring
 
 Given two strings s and t of lengths m and n respectively, return the minimum window substring of s such that every character in t (including duplicates) is included in the window. If there is no such substring, return the empty string "".
@@ -125,4 +124,46 @@ public class Solution
     }
 
 
+    //First get the substring
+    //Check if substring contains t
+    //AND, length of substring < minimum Length till now
+    //update minimum length to length of substring and the resultant as this substring
+    public static string MinWindowSubstring(string s, string t)
+    {
+        int sLen = s.Length;
+        int minLen = int.MaxValue;
+        string ans = "";
+
+        for (int i = 0; i < sLen; i++)
+        {
+            for (int j = i; j < sLen; j++)
+            {
+                string subStr = s.Substring(i, j - i + 1);
+                if (IsIncluded(subStr, t) && subStr.Length < minLen)
+                {
+                    minLen = subStr.Length;
+                    ans = subStr;
+                }
+            }
+        }
+        return ans;
+    }
+
+    //Calculate char count in substring map
+    //Calculate char count in t based on substring map
+    private static bool IsIncluded(string subStr, string t)
+    {
+        var map = new Dictionary<char, int>();
+        foreach (var ch in subStr)
+        {
+            map[ch] = map.GetValueOrDefault(ch, 0) + 1;
+        }
+
+        foreach (var c in t)
+        {
+            if (!map.ContainsKey(c) || map[c] <= 0) return false;
+            map[c]--;
+        }
+        return true;
+    }
 }

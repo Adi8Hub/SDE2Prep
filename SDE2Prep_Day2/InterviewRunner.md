@@ -8,18 +8,18 @@ This document outlines all key interview rounds you should prepare for today.
 
 ### Problem 1: Search in Rotated Sorted Array
 
-- [ ]  File: `SearchRotatedArray.cs`
-- [ ]  Platform: LeetCode 33
+- [X]  File: `SearchRotatedArray.cs`
+- [X]  Platform: LeetCode 33
 
 ### Problem 2: Find Minimum in Rotated Sorted Array
 
-- [ ]  File: `FindMinRotatedArray.cs`
-- [ ]  Platform: LeetCode 153
+- [X]  File: `FindMinRotatedArray.cs`
+- [X]  Platform: LeetCode 153
 
 ### Problem 3: Koko Eating Bananas
 
-- [ ]  File: `KokoBananas.cs`
-- [ ]  Platform: LeetCode 875
+- [X]  File: `KokoBananas.cs`
+- [X]  Platform: LeetCode 875
 
 ### Problem 4: Capacity To Ship Packages Within D Days
 
