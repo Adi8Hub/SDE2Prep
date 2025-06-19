@@ -8,3 +8,8 @@ Problem 1: Two Sum
 Problem 2: Minimum Window Substring
 - Write solution using sliding window.
 - Test edge cases.
+
+
+Completed:
+1. Two Sum
+2. Minimum Window Substring
