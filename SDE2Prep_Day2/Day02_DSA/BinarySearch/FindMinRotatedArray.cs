@@ -50,6 +50,6 @@ public class Solution
 {
     public int FindMinRotatedArray(int[] nums)
     {
-        Dic
+
     }
 }
