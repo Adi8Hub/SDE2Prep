@@ -1,0 +1,89 @@
+using System;
+using System.Collections.Generic;
+
+
+public class ListNode
+{
+    public int val;
+    public ListNode next;
+    public ListNode(int val = 0, ListNode next = null)
+    {
+        this.val = val;
+        this.next = next;
+    }
+}
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        Console.WriteLine("TODO: Run // TODO: Leetcode 23 - Merge k Sorted Lists");
+    }
+
+    public ListNode MergeKLists(ListNode[] lists)
+    {
+        if (lists == null || lists.Length == 0) return null;
+
+        var minHeap = new PriorityQueue<ListNode, int>();
+
+        foreach (var list in lists)
+        {
+            if (list != null)
+                minHeap.Enqueue(list, list.val);
+        }
+
+        ListNode dummy = new();
+        ListNode temp = dummy;
+
+        while (minHeap.Count > 0)
+        {
+            ListNode mini = minHeap.Dequeue();
+            temp.next = mini;
+            temp = temp.next;
+
+            if (mini.next != null)
+            {
+                minHeap.Enqueue(mini.next, mini.next.val);
+            }
+        }
+        return dummy.next;
+    }
+}
+
+/*
+You are given an array of k linked-lists lists, each linked-list is sorted in ascending order.
+
+Merge all the linked-lists into one sorted linked-list and return it.
+
+ 
+
+Example 1:
+
+Input: lists = [[1,4,5],[1,3,4],[2,6]]
+Output: [1,1,2,3,4,4,5,6]
+Explanation: The linked-lists are:
+[
+  1->4->5,
+  1->3->4,
+  2->6
+]
+merging them into one sorted list:
+1->1->2->3->4->4->5->6
+Example 2:
+
+Input: lists = []
+Output: []
+Example 3:
+
+Input: lists = [[]]
+Output: []
+ 
+
+Constraints:
+
+k == lists.length
+0 <= k <= 104
+0 <= lists[i].length <= 500
+-104 <= lists[i][j] <= 104
+lists[i] is sorted in ascending order.
+The sum of lists[i].length will not exceed 104
+*/
