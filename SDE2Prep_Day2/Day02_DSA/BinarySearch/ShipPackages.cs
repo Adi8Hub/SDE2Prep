@@ -45,4 +45,60 @@ Constraints:
 1 <= days <= weights.length <= 5 * 104
 1 <= weights[i] <= 500
 */
+using Internal;
 
+// int[] weights = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// int days = 5;
+int[] weights = [3, 2, 2, 4, 1, 4];
+int days = 3;
+int ans = Solution.MinCapacity(weights, days);
+Console.WriteLine($"Minimum Capacity: {ans}");
+
+public class Solution
+{
+    public static int MinCapacity(int[] weights, int days)
+    {
+        int left = weights.Max();
+        int right = weights.Sum();
+        int ans = right;
+        while (left < right)
+        {
+            int mid = left + (right - left) / 2;
+
+            if (CanSolve(weights, days, mid))
+            {
+                ans = mid;
+                right = mid - 1;
+            }
+            else
+            {
+                left = mid + 1;
+            }
+        }
+        return ans;
+    }
+
+    private static bool CanSolve(int[] weights, int days, int miniCapacity)
+    {
+        int currentCapacity = 0;
+        int daysRequired = 1;
+        foreach (var w in weights)
+        {
+            if (currentCapacity + w <= miniCapacity)
+            {
+                currentCapacity += w;
+            }
+            else
+            {
+                currentCapacity = w;
+                daysRequired++;
+            }
+        }
+        if (daysRequired <= days)
+        {
+            return true;
+        }
+        else
+            return false;
+    }
+}

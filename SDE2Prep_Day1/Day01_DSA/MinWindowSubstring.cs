@@ -59,6 +59,71 @@ Console.WriteLine($"Minimum Window Substring is: {ans}");
 
 public class Solution
 {
+    //Optimal - Using Sliding Window
+    // Calculate t char count in its map
+    //Start sliding window in 's'
+    //if char is in t, reduce the count and move to next char
+    //if all char count of t becomes zero, we have found a window
+    // shrink from left and if the left char is in t, increase the count in the map.
+    public static string MinWindowSubstring(string s, string t)
+    {
+        // var tMap = new Dictionary<char, int>();
+        var tMap = new int[128];
+        foreach (var c in t)
+        {
+            tMap[c]++;
+        }
+
+        int left = 0, right = 0;
+        int sLen = s.Length;
+        int required = t.Length;
+        int minWindow = int.MaxValue;
+        int minStart = 0;
+
+        var sMap = new int[128];
+        int found = 0; // char of t, found in s
+        while (right < s.Length)
+        {
+            char ch = s[right];
+
+            if (tMap[ch] > 0)//if char is in t, then inc its count in sMap
+            {
+                sMap[ch]++;
+                if (sMap[ch] <= tMap[ch]) found++;
+            }
+
+            //All chars of t are exhausted, calculate window size and the string and then shrink
+            while (required == found)
+            {
+                if (right - left + 1 < minWindow)
+                {
+                    minWindow = right - left + 1;
+                    minStart = left;
+                }
+
+                char leftMost = s[left];
+                if (tMap[leftMost] > 0)
+                {
+                    // if (tMap[leftMost] == 0)
+                    //     tCount++;
+                    // tMap[leftMost]++;
+
+                    if (sMap[leftMost] <= tMap[leftMost])
+                        found--;
+                    sMap[leftMost]--;
+                }
+                left++;
+            }
+            right++;
+        }
+
+        if (minWindow == int.MaxValue)
+            return "";
+
+        return s.Substring(minStart, minWindow);
+    }
+
+
     //First get the substring
     //Check if substring contains t
     //AND, length of substring < minimum Length till now

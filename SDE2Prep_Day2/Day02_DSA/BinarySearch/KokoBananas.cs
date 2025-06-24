@@ -38,3 +38,42 @@ Constraints:
 piles.length <= h <= 109
 1 <= piles[i] <= 109
 */
+
+using System;
+
+// int[] piles = [3, 6, 7, 11];
+// int h = 8;
+int[] piles = [30, 11, 23, 4, 20];
+int h = 6;
+int ans = Solution.MinEatingSpeed(piles, h);
+Console.WriteLine($"Min Eating Speed of Koko is : {ans}");
+
+public class Solution
+{
+    public static int MinEatingSpeed(int[] piles, int h)
+    {
+        int low = 1, high = piles.Max();
+        int ans = piles.Max();
+        while (low < high)
+        {
+            int mid = (low + high) / 2;
+            int totalHrs = 0;
+
+            foreach (var pile in piles)
+            {
+                totalHrs += (pile + mid - 1) / mid;
+            }
+
+            if (totalHrs <= h)
+            {
+                ans = mid;
+                high = mid - 1;
+            }
+            else
+            {
+                low = mid + 1;
+            }
+        }
+        return ans;
+    }
+}
