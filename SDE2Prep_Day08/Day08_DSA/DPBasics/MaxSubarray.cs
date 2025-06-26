@@ -1,4 +1,5 @@
 using System;
+using System.Security.Cryptography;
 
 Console.WriteLine("TODO: Run // TODO: Leetcode 53 - Maximum Subarray");
 // int[] nums = [-2, 1, -3, 4, -1, 2, 1, -5, 4];
@@ -27,21 +28,64 @@ public class Program
         #endregion
 
         #region 2
-        int currSum = nums[0];
-        int maxSum = nums[0];
+        // int currSum = nums[0];
+        // int maxSum = nums[0];
 
-        int n = nums.Length;
+        // int n = nums.Length;
 
-        for (int i = 1; i < n; i++)
-        {
-            currSum = Math.Max(currSum + nums[i], nums[i]);
-            maxSum = Math.Max(maxSum, currSum);
-        }
-        return maxSum;
+        // for (int i = 1; i < n; i++)
+        // {
+        //     currSum = Math.Max(currSum + nums[i], nums[i]);
+        //     maxSum = Math.Max(maxSum, currSum);
+        // }
+        // return maxSum;
+        #endregion
+
+        #region 3
+        return DnC(nums, 0, nums.Length - 1);
         #endregion
 
 
     }
+
+    #region 3.1
+    static int DnC(int[] nums, int left, int right)
+    {
+        if (left == right) return nums[left];
+
+        int mid = (left + right) / 2;
+        int leftSum = DnC(nums, left, mid);
+        int rightSum = DnC(nums, mid + 1, right);
+        int crossSum = CrossSum(nums, left, mid, right);
+
+        return Math.Max(leftSum, Math.Max(rightSum, crossSum));
+    }
+
+    static int CrossSum(int[] nums, int left, int mid, int right)
+    {
+        //Cross Sum : some parts in left and some parts in right half
+        //ie. crossum max would include mid points
+        //hence while calculating leftSum Max, it must have mid,thus starting from mid
+        int leftMax = int.MinValue;
+        int currSum = 0;
+        for (int i = mid; i >= 0; i--)
+        {
+            currSum += nums[i];
+            leftMax = Math.Max(leftMax, currSum);
+        }
+
+        int rightMax = int.MinValue;
+        currSum = 0;
+        for (int j = mid + 1; j <= right; j++)
+        {
+            currSum += nums[j];
+            rightMax = Math.Max(rightMax, currSum);
+        }
+
+        return leftMax + rightMax;
+    }
+
+    #endregion
 }
 
 
