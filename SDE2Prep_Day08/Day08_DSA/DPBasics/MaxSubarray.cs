@@ -2,10 +2,13 @@ using System;
 using System.Security.Cryptography;
 
 Console.WriteLine("TODO: Run // TODO: Leetcode 53 - Maximum Subarray");
-// int[] nums = [-2, 1, -3, 4, -1, 2, 1, -5, 4];
-int[] nums = [5, 4, -1, 7, 8];
+int[] nums = [-2, 1, -3, 4, -1, 2, 1, -5, 4];
+// int[] nums = [5, 4, -1, 7, 8];
 var ans = Program.MaxSubArray(nums);
 System.Console.WriteLine($"{ans}");
+System.Console.WriteLine();
+var arr = Program.MaxSumSubArray(nums);
+System.Console.WriteLine($"Array is: {string.Join(",", arr)}");
 
 public class Program
 {
@@ -46,7 +49,7 @@ public class Program
         #endregion
 
         #region 4
-        //Similar to Kadane - here dp[] is used to maintain running sum max
+        // Similar to Kadane - here dp[] is used to maintain running sum max
         int n = nums.Length;
         int[] dp = new int[nums.Length];
         dp[0] = nums[0];
@@ -64,6 +67,8 @@ public class Program
     }
 
     #region 3.1
+
+
     // static int DnC(int[] nums, int left, int right)
     // {
     //     if (left == right) return nums[left];
@@ -100,6 +105,38 @@ public class Program
     //     return leftMax + rightMax;
     // }
 
+    #endregion
+
+    #region 5 -- Returns the max size subarray of max sum
+    public static int[] MaxSumSubArray(int[] nums)
+    {
+        int currSum = nums[0];
+        int maxSum = nums[0];
+
+        int start = 0, end = 0;
+        int tempStart = 0;
+
+        for (int i = 1; i < nums.Length; i++)
+        {
+            currSum += nums[i];
+
+            if (currSum < nums[i])//we need larger sum, so curr value is larger than currSum till previous element
+            {
+                currSum = nums[i];
+                tempStart = i;//start resets to this point
+
+            }
+
+
+            if (currSum > maxSum)
+            {
+                maxSum = currSum;
+                start = tempStart;
+                end = i;
+            }
+        }
+        return nums[start..(end + 1)];
+    }
     #endregion
 }
 
