@@ -31,8 +31,9 @@ using Internal;
 
 
 // string s = "abcabcbb";
-// string s = "pwwkew";
-string s = "bbbbb";
+string s = "pwwkew";
+// string s = "bbbbb";
+
 int ans = Solution.LengthOfLongestSubstring(s);
 System.Console.WriteLine($"Longest SUbstring without repeating characters: {ans}");
 
@@ -40,14 +41,18 @@ public class Solution
 {
     public static int LengthOfLongestSubstring(string s)
     {
-        var lastSeen = new Dictionary<char, int>();
+
+        int[] lastSeen = new int[128];
+        Array.Fill(lastSeen, -1);
+        // var lastSeen = new Dictionary<char, int>(); // Using map
         int left = 0, right = 0;
         int n = s.Length;
         int maxLen = 0;
 
         while (right < n)
         {
-            if (lastSeen.ContainsKey(s[right]))
+            if (lastSeen[s[right]] != -1)
+            // if (lastSeen.ContainsKey(s[right]))
             {
                 left = Math.Max(left, lastSeen[s[right]] + 1);
             }
