@@ -28,16 +28,15 @@ public class Program
             return;
         }
 
-        if (target < 0 || idx >= candidates.Length)
-            return;
+        for (int i = idx; i < candidates.Length; i++)
+        {
+            if (candidates[i] > target) return;
 
-        //Pick
-        temp.Add(candidates[idx]);
-
-        solve(candidates, target - candidates[idx], idx, temp, res);
-        temp.RemoveAt(temp.Count - 1);
-        //Skip
-        solve(candidates, target, idx + 1, temp, res);
+            //Pick
+            temp.Add(candidates[i]);
+            solve(candidates, target - candidates[i], i, temp, res);
+            temp.RemoveAt(temp.Count - 1);
+        }
     }
 }
 
