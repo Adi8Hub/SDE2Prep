@@ -1,0 +1,15 @@
+# Interview Runner – Day08
+
+## 1️⃣ DSA
+- [X] ClimbingStairs (`ClimbingStairs.cs`)
+- [X] HouseRobber (`HouseRobber.cs`)
+- [X] MaxSubarray (`MaxSubarray.cs`)
+
+## 2️⃣ LLD – NotificationSystem
+📂 `Day08_LLD/NotificationSystem`
+
+## 3️⃣ System Design – DistributedCache
+📂 `Day08_SystemDesign/DistributedCache`
+
+## 4️⃣ Behavioral – DiveDeep
+📂 `Day08_Behavioral/DiveDeep.md`
