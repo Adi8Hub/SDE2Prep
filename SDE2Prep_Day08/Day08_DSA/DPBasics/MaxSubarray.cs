@@ -11,26 +11,45 @@ public class Program
 
     public static int MaxSubArray(int[] nums)
     {
+        #region 1
+        // int n = nums.Length;
+        // int maxSum = int.MinValue;
+        // for (int i = 0; i < n; i++)
+        // {
+        //     int currSum = 0;
+        //     for (int j = i; j < n; j++)
+        //     {
+        //         currSum += nums[j];
+        //         maxSum = Math.Max(maxSum, currSum);
+        //     }
+        // }
+        // return maxSum;
+        #endregion
+
+        #region 2
+        int currSum = nums[0];
+        int maxSum = nums[0];
+
         int n = nums.Length;
-        int maxSum = int.MinValue;
-        for (int i = 0; i < n; i++)
+
+        for (int i = 1; i < n; i++)
         {
-            int currSum = 0;
-            for (int j = i; j < n; j++)
-            {
-                currSum += nums[j];
-                maxSum = Math.Max(maxSum, currSum);
-            }
+            currSum = Math.Max(currSum + nums[i], nums[i]);
+            maxSum = Math.Max(maxSum, currSum);
         }
         return maxSum;
+        #endregion
+
+
     }
 }
 
 
 ///// 1. Brute - n^2
-////// 2. Kadane
-////// 3. DnC
-////// 4. DP
+////// 2. Kadane - n
+////// 3. DnC - nlogn
+////// 4. DP - n
+////// 5. To return the maxSubarraySum
 
 
 /*
