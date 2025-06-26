@@ -23,10 +23,11 @@ This document outlines all key interview rounds you should prepare for today.
 
 ### Problem 4: Capacity To Ship Packages Within D Days
 
-- [ ]  File: `ShipPackages.cs`
-- [ ]  Platform: LeetCode 1011
+- [X]  File: `ShipPackages.cs`
+- [X]  Platform: LeetCode 1011
 
 ---
+//////////////////////////////////////////////////////////////////////////////////////////////
 
 ## 2️⃣ LLD – Library Management System
 
@@ -40,7 +41,7 @@ This document outlines all key interview rounds you should prepare for today.
 
 📂 Location: `Day02_LLD/LibrarySystem/`
 
----
+///////////////////////////////////////////////////////////////////////////////////////////////
 
 ## 3️⃣ System Design – TinyURL
 
@@ -58,7 +59,7 @@ Design a scalable URL Shortener like TinyURL.
 
 📂 Location: `Day02_SystemDesign/TinyURL/README.md`
 
----
+////////////////////////////////////////////////////////////////////////////////////////////////
 
 ## 4️⃣ Behavioral – Customer Obsession
 
@@ -79,7 +80,7 @@ Design a scalable URL Shortener like TinyURL.
 
 ## ✅ End of Day Checklist
 
-- [ ]  Solved all 4 DSA problems with working code
+- [X]  Solved all 4 DSA problems with working code
 - [ ]  Created full class + service structure for LLD
 - [ ]  Documented System Design for TinyURL
 - [ ]  Wrote STAR story for Customer Obsession

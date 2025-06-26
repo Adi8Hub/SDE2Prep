@@ -4,3 +4,6 @@ Time: 45 min
 Prompt: Design a Parking Lot system.
 - Clarify scope, classes, relationships.
 - Describe interactions, APIs.
+
+
+********* NEEDS MORE TIME *************
