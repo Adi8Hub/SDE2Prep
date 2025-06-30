@@ -1,0 +1,28 @@
+{
+    "folder-color.pathColors": [
+        {
+            "folderPath": "Arrays\\FindTheOdd\\",
+            "color": "foldercolorizer.color_660000"
+        },
+        {
+            "folderPath": "Arrays\\FindTheOdd\\FindOddOccurrence_Sorting.cs\\",
+            "color": "foldercolorizer.color_660000"
+        },
+        {
+            "folderPath": "Arrays\\FindTheOdd\\FindOddOccurrence_XOR.cs\\",
+            "color": "foldercolorizer.color_660000"
+        },
+        {
+            "folderPath": "Arrays\\FindTheOdd\\FindTheOdd_Q.cs\\",
+            "color": "foldercolorizer.color_660000"
+        },
+        {
+            "folderPath": "Arrays\\FindTheOdd\\ReadMe.md\\",
+            "color": "foldercolorizer.color_00cc33"
+        },
+        {
+            "folderPath": "Arrays\\FindTheOdd\\FindOddOccurrence_HashMap.cs\\",
+            "color": "foldercolorizer.color_660000"
+        }
+    ]
+}
