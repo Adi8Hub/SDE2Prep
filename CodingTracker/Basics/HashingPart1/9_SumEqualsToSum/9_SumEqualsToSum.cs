@@ -1,8 +1,10 @@
 using System;
 using System.Collections.Generic;
 
-int[] A = { 3, 4, 7, 1, 2, 9, 8 };
-Console.WriteLine(Solution.HasEqualSumPairs(A)); // Output: 1
+// int[] A = { 3, 4, 7, 1, 2, 9, 8 }; //// True
+
+int[] A = [65, 30, 7, 90, 1, 9, 8]; //// False
+Console.WriteLine(Solution.HasEqualSumPairs(A));
 class Solution
 {
     public static bool HasEqualSumPairs(int[] A)
